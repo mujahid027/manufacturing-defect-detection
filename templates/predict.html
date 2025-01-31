@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <p>Accuracy: {{ accuracy }}</p>
+    <p>F1 Score: {{ f1_score }}</p>
+    <form id="fileForm" method="post" enctype="multipart/form-data" action="http://localhost:5000/predict">
+        <input type="file" id="fileInput" name="file">
+        <button type="submit">Upload File</button>
+        
+    </form>
+</body>
+</html>
