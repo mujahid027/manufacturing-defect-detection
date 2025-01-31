@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+</head>
+<body>
+    <h1>Predictions</h1>
+    <p>Predictions: {{ predictions }}</p>
+    <p>Probabilities: {{ probabilities }}</p>
+    <table border="1">
+        <tr>
+            <th>Prediction</th>
+            <th>Probability</th>
+        </tr>
+        {% for i in range(predictions | length) %}
+        <tr>
+            <td>{{ predictions[i] }}</td>
+            <td>{{ probabilities[i] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
